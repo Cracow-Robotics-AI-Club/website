@@ -10,7 +10,7 @@ const pastEvents = [
     date: "Monday, February 2, 2026",
     venue: "hub:raum Kraków, Przemysłowa 12",
     attendees: 30,
-    description: "Talks by Szymon Rusiecki on 'The DARPA Triage Challenge and the Ethics of Algorithmic Decisions' and Marcin Gałczyński on 'Development of fitguardian - mechatronic mannequin'.",
+    description: "DARPA Triage Challenge ethics and mechatronic mannequin development.",
     url: "https://www.meetup.com/cracow-robotics-ai-club/events/",
   },
   {
@@ -19,7 +19,7 @@ const pastEvents = [
     date: "Monday, November 24, 2025",
     venue: "N-iX Poland, Zabłocie 43A/1st floor, Kraków",
     attendees: 33,
-    description: "Special edition meetup co-hosted with N-iX Poland featuring industry talks on robotics and AI applications.",
+    description: "Special edition co-hosted with N-iX Poland on industry robotics.",
     url: "https://www.meetup.com/cracow-robotics-ai-club/events/",
   },
   {
@@ -28,7 +28,7 @@ const pastEvents = [
     date: "Monday, July 7, 2025",
     venue: "hub:raum Kraków, Przemysłowa 12",
     attendees: 28,
-    description: "Talks on using pyroboplan library for trajectory planning on robotic arms, and integrating AI agents with ROS 2. Stream supported by Cracow Linux Users Group.",
+    description: "Trajectory planning with pyroboplan and AI agents in ROS 2.",
     url: "https://www.meetup.com/cracow-robotics-ai-club/events/",
   },
   {
@@ -37,7 +37,7 @@ const pastEvents = [
     date: "February 2025",
     venue: "hub:raum Kraków",
     attendees: 35,
-    description: "Milestone 10th meetup celebrating our growing community with talks on latest robotics developments.",
+    description: "Milestone 10th meetup with latest robotics developments.",
     url: "https://www.meetup.com/cracow-robotics-ai-club/events/",
   },
   {
@@ -46,7 +46,7 @@ const pastEvents = [
     date: "Saturday, October 19, 2024",
     venue: "Kraków",
     attendees: 30,
-    description: "Discussions on autonomous systems, mobile robotics, and the latest developments in ROS ecosystem.",
+    description: "Autonomous systems, mobile robotics, and ROS ecosystem updates.",
     url: "https://www.meetup.com/cracow-robotics-ai-club/events/",
   },
   {
@@ -55,7 +55,7 @@ const pastEvents = [
     date: "Monday, March 25, 2024",
     venue: "Techie's Space, Na Zjeździe 11, Kraków",
     attendees: 26,
-    description: "Konrad Bujak on '10 business ideas around Generative AI' and Krzysztof Wojciechowski on 'Using ROS without installing ROS - Setting up development environments'.",
+    description: "Generative AI business ideas and ROS development environments.",
     url: "https://www.meetup.com/cracow-robotics-ai-club/events/",
   },
   {
@@ -64,7 +64,7 @@ const pastEvents = [
     date: "Monday, December 18, 2023",
     venue: "Techie's Space, Na Zjeździe 11, Kraków",
     attendees: 25,
-    description: "Tomasz Chłeminiak on 'Developing Test Bench for a Space Rover: Case Study' and Bartłomiej Bonar on 'Path planning methods for every occasion'.",
+    description: "Space rover test bench development and path planning methods.",
     url: "https://www.meetup.com/cracow-robotics-ai-club/events/",
   },
   {
@@ -73,7 +73,7 @@ const pastEvents = [
     date: "2023",
     venue: "Kraków",
     attendees: 22,
-    description: "Exploring ROS ecosystem, robotics applications, and networking with the local tech community.",
+    description: "ROS ecosystem exploration and community networking.",
     url: "https://www.meetup.com/cracow-robotics-ai-club/events/",
   },
   {
@@ -82,7 +82,7 @@ const pastEvents = [
     date: "2023",
     venue: "Kraków",
     attendees: 20,
-    description: "Continuing the tradition of bringing together robotics enthusiasts with talks on ROS and AI applications.",
+    description: "ROS and AI applications for robotics enthusiasts.",
     url: "https://www.meetup.com/cracow-robotics-ai-club/events/",
   },
   {
@@ -91,7 +91,7 @@ const pastEvents = [
     date: "Monday, May 22, 2023",
     venue: "Kraków",
     attendees: 18,
-    description: "Talks about LIDARs and work done by Robotec.ai. Event was also streamed on YouTube for remote attendees.",
+    description: "LIDARs and Robotec.ai work, with YouTube live stream.",
     url: "https://www.meetup.com/cracow-robotics-ai-club/events/",
   },
   {
@@ -100,7 +100,7 @@ const pastEvents = [
     date: "Monday, March 6, 2023",
     venue: "Kraków",
     attendees: 15,
-    description: "Third CRAIC meeting - a stepping stone to grow the robotics community in Poland, bridging industry, academia, hobbyists and investors.",
+    description: "Building Poland's robotics community across industry and academia.",
     url: "https://www.meetup.com/cracow-robotics-ai-club/events/",
   },
 ]
