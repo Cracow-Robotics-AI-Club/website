@@ -1,23 +1,25 @@
 import { Header } from "@/components/header"
-import { Hero } from "@/components/hero"
-import { LatestEvent } from "@/components/latest-event"
-import { About } from "@/components/about"
-import { PastEvents } from "@/components/past-events"
-import { Speakers } from "@/components/speakers"
-import { Gallery } from "@/components/gallery"
+import { HeroSection } from "@/components/hero-section"
+import { AboutSection } from "@/components/about-section"
+import { EventsSection } from "@/components/events-section"
+import { SpeakersSection } from "@/components/speakers-section"
+import { GallerySection } from "@/components/gallery-section"
+import { SponsorsSection } from "@/components/sponsors-section"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen">
       <Header />
-      <Hero />
-      <LatestEvent />
-      <About />
-      <PastEvents />
-      <Speakers />
-      <Gallery />
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <EventsSection />
+        <SpeakersSection />
+        <GallerySection />
+        <SponsorsSection />
+      </main>
       <Footer />
-    </main>
+    </div>
   )
 }

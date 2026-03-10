@@ -1,8 +1,9 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Bot, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { useState } from "react"
 
 export function Header() {
@@ -12,9 +13,13 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full bg-[#274040] shadow-lg">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#608C5E]">
-            <Bot className="h-7 w-7 text-white" />
-          </div>
+          <Image
+            src="/images/logo.jpg"
+            alt="Cracow Robotics & AI Club Logo"
+            width={48}
+            height={48}
+            className="rounded-xl"
+          />
           <div className="flex flex-col">
             <span className="text-lg font-bold text-[#F2D4AE]" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
               Cracow Robotics

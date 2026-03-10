@@ -1,5 +1,5 @@
-import { Bot } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -9,9 +9,13 @@ export function Footer() {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <Link href="/" className="mb-4 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#608C5E]">
-                <Bot className="h-5 w-5 text-white" />
-              </div>
+              <Image
+                src="/images/logo.jpg"
+                alt="Cracow Robotics & AI Club Logo"
+                width={40}
+                height={40}
+                className="rounded-lg"
+              />
               <span 
                 className="text-lg font-bold text-[#F2D4AE]"
                 style={{ fontFamily: 'var(--font-space-grotesk)' }}
