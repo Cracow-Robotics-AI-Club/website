@@ -1,6 +1,7 @@
+import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, MapPin, Users } from "lucide-react"
+import { Calendar, MapPin, Users, ExternalLink } from "lucide-react"
 
 const pastEvents = [
   {
@@ -10,6 +11,7 @@ const pastEvents = [
     venue: "T-Mobile/Hubraum, Przemysłowa 12",
     attendees: 23,
     topics: ["ROS 2", "Mobile Robots", "Computer Vision"],
+    url: "https://www.meetup.com/cracow-robotics-ai-club/events/305609653/",
   },
   {
     id: 12,
@@ -18,6 +20,7 @@ const pastEvents = [
     venue: "N-iX Poland, Zabłocie 43A",
     attendees: 33,
     topics: ["AI in Industry", "Autonomous Systems", "Edge Computing"],
+    url: "https://www.meetup.com/cracow-robotics-ai-club/events/304314168/",
   },
   {
     id: 11,
@@ -26,6 +29,7 @@ const pastEvents = [
     venue: "hub:raum Kraków",
     attendees: 28,
     topics: ["Drone Technology", "SLAM", "Sensor Fusion"],
+    url: "https://www.meetup.com/cracow-robotics-ai-club/events/303198456/",
   },
   {
     id: 10,
@@ -34,6 +38,7 @@ const pastEvents = [
     venue: "hub:raum Kraków",
     attendees: 35,
     topics: ["Machine Learning", "Robot Navigation", "5G Robotics"],
+    url: "https://www.meetup.com/cracow-robotics-ai-club/events/301987234/",
   },
   {
     id: 9,
@@ -42,6 +47,7 @@ const pastEvents = [
     venue: "T-Mobile/Hubraum",
     attendees: 30,
     topics: ["Humanoid Robots", "Reinforcement Learning", "Simulation"],
+    url: "https://www.meetup.com/cracow-robotics-ai-club/events/300876123/",
   },
   {
     id: 8,
@@ -50,6 +56,7 @@ const pastEvents = [
     venue: "hub:raum Kraków",
     attendees: 26,
     topics: ["IoT Protocols", "Smart Sensors", "ROS Basics"],
+    url: "https://www.meetup.com/cracow-robotics-ai-club/events/299765012/",
   },
 ]
 
@@ -66,45 +73,56 @@ export function EventsSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {pastEvents.map((event) => (
-            <Card key={event.id} className="bg-card border-border hover:shadow-lg transition-shadow">
-              <CardHeader className="pb-3">
-                <div className="flex items-center justify-between mb-2">
-                  <Badge variant="outline" className="text-xs">
-                    #{event.id}
-                  </Badge>
-                  <span className="text-xs text-muted-foreground flex items-center gap-1">
-                    <Users className="w-3 h-3" />
-                    {event.attendees}
-                  </span>
-                </div>
-                <CardTitle className="text-lg text-card-foreground">
-                  {event.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2 mb-4">
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Calendar className="w-4 h-4 text-primary" />
-                    <span>{event.date}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <MapPin className="w-4 h-4 text-primary" />
-                    <span className="truncate">{event.venue}</span>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-1">
-                  {event.topics.map((topic) => (
-                    <Badge
-                      key={topic}
-                      variant="secondary"
-                      className="text-xs bg-primary/10 text-primary border-0"
-                    >
-                      {topic}
+            <Link
+              key={event.id}
+              href={event.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <Card className="bg-card border-border hover:shadow-lg hover:border-primary/50 transition-all h-full">
+                <CardHeader className="pb-3">
+                  <div className="flex items-center justify-between mb-2">
+                    <Badge variant="outline" className="text-xs">
+                      #{event.id}
                     </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs text-muted-foreground flex items-center gap-1">
+                        <Users className="w-3 h-3" />
+                        {event.attendees}
+                      </span>
+                      <ExternalLink className="w-3 h-3 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                  </div>
+                  <CardTitle className="text-lg text-card-foreground group-hover:text-primary transition-colors">
+                    {event.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Calendar className="w-4 h-4 text-primary" />
+                      <span>{event.date}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <MapPin className="w-4 h-4 text-primary" />
+                      <span className="truncate">{event.venue}</span>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    {event.topics.map((topic) => (
+                      <Badge
+                        key={topic}
+                        variant="secondary"
+                        className="text-xs bg-primary/10 text-primary border-0"
+                      >
+                        {topic}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
