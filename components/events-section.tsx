@@ -7,56 +7,56 @@ const pastEvents = [
   {
     id: 13,
     title: "Cracow Robotics & AI Meetup #13",
-    date: "February 2, 2026",
-    venue: "T-Mobile/Hubraum, Przemysłowa 12",
+    date: "Monday, February 2, 2026",
+    venue: "T-Mobile/Hubraum, Przemysłowa 12, Kraków",
     attendees: 23,
-    topics: ["ROS 2", "Mobile Robots", "Computer Vision"],
-    url: "https://www.meetup.com/cracow-robotics-ai-club/events/305609653/",
+    description: "Another great meetup with talks on robotics and AI technologies.",
+    url: "https://www.meetup.com/cracow-robotics-ai-club/events/",
   },
   {
     id: 12,
     title: "Cracow Robotics & AI Meetup x N-iX #12",
-    date: "November 24, 2025",
-    venue: "N-iX Poland, Zabłocie 43A",
+    date: "Monday, November 24, 2025",
+    venue: "N-iX Poland, Zabłocie 43A/1st floor, Kraków",
     attendees: 33,
-    topics: ["AI in Industry", "Autonomous Systems", "Edge Computing"],
-    url: "https://www.meetup.com/cracow-robotics-ai-club/events/304314168/",
+    description: "Special edition meetup co-hosted with N-iX Poland.",
+    url: "https://www.meetup.com/cracow-robotics-ai-club/events/",
   },
   {
     id: 11,
     title: "Cracow Robotics & AI Meetup #11",
-    date: "September 15, 2025",
+    date: "2025",
     venue: "hub:raum Kraków",
     attendees: 28,
-    topics: ["Drone Technology", "SLAM", "Sensor Fusion"],
-    url: "https://www.meetup.com/cracow-robotics-ai-club/events/303198456/",
+    description: "Exploring the latest in robotics and artificial intelligence.",
+    url: "https://www.meetup.com/cracow-robotics-ai-club/events/",
   },
   {
     id: 10,
     title: "Cracow Robotics & AI Meetup #10",
-    date: "June 20, 2025",
+    date: "2025",
     venue: "hub:raum Kraków",
     attendees: 35,
-    topics: ["Machine Learning", "Robot Navigation", "5G Robotics"],
-    url: "https://www.meetup.com/cracow-robotics-ai-club/events/301987234/",
+    description: "Milestone 10th meetup celebrating our growing community.",
+    url: "https://www.meetup.com/cracow-robotics-ai-club/events/",
   },
   {
     id: 9,
     title: "Cracow Robotics & AI Meetup #9",
-    date: "April 10, 2025",
+    date: "2024",
     venue: "T-Mobile/Hubraum",
     attendees: 30,
-    topics: ["Humanoid Robots", "Reinforcement Learning", "Simulation"],
-    url: "https://www.meetup.com/cracow-robotics-ai-club/events/300876123/",
+    description: "Discussions on autonomous systems and mobile robotics.",
+    url: "https://www.meetup.com/cracow-robotics-ai-club/events/",
   },
   {
     id: 8,
     title: "Cracow Robotics & AI Meetup #8",
-    date: "February 5, 2025",
+    date: "2024",
     venue: "hub:raum Kraków",
     attendees: 26,
-    topics: ["IoT Protocols", "Smart Sensors", "ROS Basics"],
-    url: "https://www.meetup.com/cracow-robotics-ai-club/events/299765012/",
+    description: "Deep dive into IoT protocols and smart sensor technologies.",
+    url: "https://www.meetup.com/cracow-robotics-ai-club/events/",
   },
 ]
 
@@ -99,7 +99,10 @@ export function EventsSection() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-2 mb-4">
+                  <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+                    {event.description}
+                  </p>
+                  <div className="space-y-2">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Calendar className="w-4 h-4 text-primary" />
                       <span>{event.date}</span>
@@ -108,17 +111,6 @@ export function EventsSection() {
                       <MapPin className="w-4 h-4 text-primary" />
                       <span className="truncate">{event.venue}</span>
                     </div>
-                  </div>
-                  <div className="flex flex-wrap gap-1">
-                    {event.topics.map((topic) => (
-                      <Badge
-                        key={topic}
-                        variant="secondary"
-                        className="text-xs bg-primary/10 text-primary border-0"
-                      >
-                        {topic}
-                      </Badge>
-                    ))}
                   </div>
                 </CardContent>
               </Card>

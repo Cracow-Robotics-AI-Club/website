@@ -20,8 +20,7 @@ export function HeroSection() {
             Cracow Robotics & AI Meetup #14
           </h2>
           <p className="text-lg text-secondary-foreground/80 mb-8 max-w-2xl mx-auto text-pretty">
-            Join us for another exciting meetup featuring talks on autonomous systems, 
-            ROS 2 developments, and the latest in AI-powered robotics.
+            {"It's our 14th CRAIC event, and we'd love to see you there—don't miss out! Featuring talks on mechatronic mannequins and indoor-outdoor localization challenges."}
           </p>
         </div>
 
@@ -41,19 +40,19 @@ export function HeroSection() {
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Calendar className="w-5 h-5 text-primary" />
-                  <span>March 15, 2026 · Saturday</span>
+                  <span>Monday, March 30, 2026</span>
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Clock className="w-5 h-5 text-primary" />
-                  <span>6:30 PM CET</span>
+                  <span>6:30 PM CEST</span>
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <MapPin className="w-5 h-5 text-primary" />
-                  <span>hub:raum Kraków, Przemysłowa 12</span>
+                  <span>T-Mobile/Hubraum, Przemysłowa 12, 30-701 Kraków</span>
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Users className="w-5 h-5 text-primary" />
-                  <span>Sponsored by Weekly Robotics, Husarion & hub:raum</span>
+                  <span>Sponsored by hub:raum, Husarion & Weekly Robotics</span>
                 </div>
               </div>
 
