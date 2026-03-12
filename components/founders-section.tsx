@@ -49,7 +49,7 @@ export function FoundersSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {founders.map((founder) => (
-            <Card key={founder.name} className="bg-card border border-border overflow-hidden hover:shadow-lg transition-shadow">
+            <Card key={founder.name} className="bg-card border border-border overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
               <div className="relative bg-muted w-full h-64">
                 <Image
                   src={founder.image}
@@ -59,11 +59,11 @@ export function FoundersSection() {
                   className="object-cover"
                 />
               </div>
-              <CardContent className="p-5 text-center">
-                <h3 className="text-lg font-semibold text-card-foreground mb-3">
+              <CardContent className="p-5 text-center flex flex-col flex-1 justify-between">
+                <h3 className="text-base font-semibold text-card-foreground whitespace-nowrap">
                   {founder.name}
                 </h3>
-                <div className="flex items-center justify-center gap-3">
+                <div className="flex items-center justify-center gap-3 mt-3">
                   {founder.linkedin && (
                     <Link
                       href={founder.linkedin}

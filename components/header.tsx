@@ -19,6 +19,7 @@ export function Header() {
             width={52}
             height={52}
             className="rounded-lg"
+            priority
           />
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/napis_upscale%281%29-IlsjYEemXTrtC9koYwSSKPGJ2vgB3H.png"
