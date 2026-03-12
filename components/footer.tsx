@@ -17,11 +17,11 @@ export function Footer() {
                 className="rounded-lg"
               />
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/napis_upscale%281%29-IlsjYEemXTrtC9koYwSSKPGJ2vgB3H.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/napis-KYcIGBJTSZB6NuDNX9BM5yZcCD7Z0D.png"
                 alt="CRAIC - Cracow Robotics & AI Club"
-                width={180}
-                height={56}
-                unoptimized
+                width={154}
+                height={48}
+                className="h-[48px] w-auto"
               />
             </Link>
             <p className="mb-6 max-w-md text-sm text-[#F2D4AE]/70">
@@ -62,9 +62,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="mb-4 font-bold text-[#F2D4AE]">
-              Quick Links
-            </h4>
+            <h4 className="mb-4 font-bold text-[#F2D4AE]">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="#about" className="text-sm text-[#F2D4AE]/70 transition-colors hover:text-[#608C5E]">
@@ -91,13 +89,9 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="mb-4 font-bold text-[#F2D4AE]">
-              Contact
-            </h4>
+            <h4 className="mb-4 font-bold text-[#F2D4AE]">Contact</h4>
             <ul className="space-y-2">
-              <li className="text-sm text-[#F2D4AE]/70">
-                Kraków, Poland
-              </li>
+              <li className="text-sm text-[#F2D4AE]/70">Kraków, Poland</li>
               <li>
                 <a
                   href="mailto:cracow.robotics@gmail.com"

@@ -22,12 +22,12 @@ export function Header() {
             priority
           />
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/napis_upscale%281%29-IlsjYEemXTrtC9koYwSSKPGJ2vgB3H.png"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/napis-KYcIGBJTSZB6NuDNX9BM5yZcCD7Z0D.png"
             alt="CRAIC - Cracow Robotics & AI Club"
-            width={120}
-            height={38}
-            className="sm:w-[160px] sm:h-[50px]"
-            unoptimized
+            width={167}
+            height={52}
+            className="h-[40px] sm:h-[52px] w-auto"
+            priority
           />
         </Link>
 
