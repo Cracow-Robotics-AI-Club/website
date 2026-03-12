@@ -21,6 +21,7 @@ export function Footer() {
                 alt="CRAIC - Cracow Robotics & AI Club"
                 width={140}
                 height={46}
+                className="h-auto"
               />
             </Link>
             <p className="mb-6 max-w-md text-sm text-[#F2D4AE]/70">
