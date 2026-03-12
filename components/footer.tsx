@@ -10,18 +10,18 @@ export function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="mb-4 flex items-center gap-3">
               <Image
-                src="/images/logo.jpg"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo_512x512%281%29-E4DHuZAN5AVhr2intXWWZ1jFBPY0Pz.png"
                 alt="Cracow Robotics & AI Club Logo"
-                width={40}
-                height={40}
+                width={48}
+                height={48}
                 className="rounded-lg"
               />
-              <span 
-                className="text-lg font-bold text-[#F2D4AE]"
-                style={{ fontFamily: 'var(--font-space-grotesk)' }}
-              >
-                Cracow Robotics & AI Club
-              </span>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/napis-IA2iKP9GffUAyh0G9IQlX15iaxW52P.png"
+                alt="CRAIC - Cracow Robotics & AI Club"
+                width={140}
+                height={46}
+              />
             </Link>
             <p className="mb-6 max-w-md text-sm text-[#F2D4AE]/70">
               A community for robotics, AI, and technology enthusiasts in Kraków, Poland. 

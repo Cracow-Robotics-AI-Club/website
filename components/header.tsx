@@ -14,20 +14,19 @@ export function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/images/logo.jpg"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo_512x512%281%29-E4DHuZAN5AVhr2intXWWZ1jFBPY0Pz.png"
             alt="Cracow Robotics & AI Club Logo"
-            width={48}
-            height={48}
-            className="rounded-xl"
+            width={52}
+            height={52}
+            className="rounded-lg"
           />
-          <div className="flex flex-col">
-            <span className="text-lg font-bold text-[#F2D4AE]" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
-              Cracow Robotics
-            </span>
-            <span className="text-sm text-[#608C5E]" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
-              & AI Club
-            </span>
-          </div>
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/napis-IA2iKP9GffUAyh0G9IQlX15iaxW52P.png"
+            alt="CRAIC - Cracow Robotics & AI Club"
+            width={120}
+            height={40}
+            className="hidden sm:block"
+          />
         </Link>
 
         {/* Desktop Navigation */}
