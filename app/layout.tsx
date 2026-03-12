@@ -19,6 +19,26 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
+  openGraph: {
+    title: 'Cracow Robotics & AI Club',
+    description: 'A community for robotics, AI, IoT, and emerging technology enthusiasts in Kraków, Poland.',
+    type: 'website',
+    locale: 'en_US',
+    images: [
+      {
+        url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo_512x512%281%29-E4DHuZAN5AVhr2intXWWZ1jFBPY0Pz.png',
+        width: 512,
+        height: 512,
+        alt: 'Cracow Robotics & AI Club Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Cracow Robotics & AI Club',
+    description: 'A community for robotics, AI, IoT, and emerging technology enthusiasts in Kraków, Poland.',
+    images: ['https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo_512x512%281%29-E4DHuZAN5AVhr2intXWWZ1jFBPY0Pz.png'],
+  },
 }
 
 export default function RootLayout({
