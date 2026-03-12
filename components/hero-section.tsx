@@ -56,6 +56,18 @@ export function HeroSection() {
                 </div>
               </div>
 
+              {/* Talk summaries */}
+              <div className="mb-6 space-y-3 text-sm">
+                <div className="p-3 rounded-lg bg-muted/50">
+                  <p className="font-semibold text-foreground">Marcin Gałczyński - Development of fitguardian</p>
+                  <p className="text-muted-foreground">A humorous tale about building a mechatronic mannequin for fashion warehouses, funded by NCBIR.</p>
+                </div>
+                <div className="p-3 rounded-lg bg-muted/50">
+                  <p className="font-semibold text-foreground">Katarzyna Kijania - Lost in the Doorway?</p>
+                  <p className="text-muted-foreground">Exploring indoor-outdoor localization challenges using multi-sensor fusion with LiDAR, IMU, and GNSS.</p>
+                </div>
+              </div>
+
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
                   <a href="https://www.meetup.com/cracow-robotics-ai-club/" target="_blank" rel="noopener noreferrer">
