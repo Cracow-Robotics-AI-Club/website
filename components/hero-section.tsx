@@ -4,7 +4,7 @@ import { Calendar, MapPin, Users, Clock, ArrowRight } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section className="relative bg-secondary py-16 md:py-24 overflow-hidden distressed-bg scratched">
+    <section className="relative bg-secondary py-16 md:py-24 overflow-hidden grain-texture rust-spots">
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-primary blur-3xl" />
@@ -25,7 +25,7 @@ export function HeroSection() {
         </div>
 
         {/* Featured Event Card */}
-        <div className="max-w-3xl mx-auto bg-card rounded-2xl p-6 md:p-8 shadow-2xl border border-border aged-paper worn-edges paint-chip relative">
+        <div className="max-w-3xl mx-auto bg-card rounded-2xl p-6 md:p-8 shadow-2xl border-4 border-[#274040]/30 aged-paper worn-edges corner-rust relative">
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex-1">
               <div className="flex flex-wrap gap-2 mb-4">

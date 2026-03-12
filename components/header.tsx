@@ -21,10 +21,10 @@ export function Header() {
             className="rounded-lg"
           />
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/napis-IA2iKP9GffUAyh0G9IQlX15iaxW52P.png"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/napis_upscale%281%29-IlsjYEemXTrtC9koYwSSKPGJ2vgB3H.png"
             alt="CRAIC - Cracow Robotics & AI Club"
-            width={120}
-            height={40}
+            width={160}
+            height={50}
             className="hidden sm:block h-auto"
           />
         </Link>
