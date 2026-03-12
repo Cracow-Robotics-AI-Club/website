@@ -26,7 +26,8 @@ export function Header() {
             alt="CRAIC - Cracow Robotics & AI Club"
             width={167}
             height={52}
-            className="h-[40px] sm:h-[52px] w-auto"
+            style={{ width: 'auto', height: '40px' }}
+            className="sm:!h-[52px]"
             priority
           />
         </Link>

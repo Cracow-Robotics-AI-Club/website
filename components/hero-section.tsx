@@ -10,7 +10,7 @@ export function HeroSection() {
         <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-primary blur-3xl" />
         <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-accent blur-3xl" />
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
@@ -33,10 +33,10 @@ export function HeroSection() {
                   Upcoming
                 </Badge>
                 <Badge variant="outline" className="border-accent text-accent">
-                  41 Attendees
+                  46 Attendees
                 </Badge>
               </div>
-              
+
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Calendar className="w-5 h-5 text-primary" />

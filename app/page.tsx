@@ -7,6 +7,7 @@ import { FoundersSection } from "@/components/founders-section"
 import { GallerySection } from "@/components/gallery-section"
 import { SponsorsSection } from "@/components/sponsors-section"
 import { Footer } from "@/components/footer"
+import { MobileCollapsibleSection } from "@/components/mobile-collapsible-section"
 
 export default function Home() {
   return (
@@ -14,12 +15,24 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <AboutSection />
-        <EventsSection />
-        <HallOfFameSection />
-        <FoundersSection />
-        <GallerySection />
-        <SponsorsSection />
+        <MobileCollapsibleSection title="About" defaultOpen>
+          <AboutSection />
+        </MobileCollapsibleSection>
+        <MobileCollapsibleSection title="Events">
+          <EventsSection />
+        </MobileCollapsibleSection>
+        <MobileCollapsibleSection title="Speakers">
+          <HallOfFameSection />
+        </MobileCollapsibleSection>
+        <MobileCollapsibleSection title="Founders">
+          <FoundersSection />
+        </MobileCollapsibleSection>
+        <MobileCollapsibleSection title="Gallery">
+          <GallerySection />
+        </MobileCollapsibleSection>
+        <MobileCollapsibleSection title="Sponsors">
+          <SponsorsSection />
+        </MobileCollapsibleSection>
       </main>
       <Footer />
     </div>
