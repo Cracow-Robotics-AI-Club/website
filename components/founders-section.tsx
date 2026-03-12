@@ -8,7 +8,7 @@ const founders = [
     name: "Adam Serafin",
     image: "/images/founders/adaser.jpg",
     linkedin: "https://www.linkedin.com/in/adam-serafin/",
-    github: "https://github.com/aserafin",
+    github: "https://github.com/Serafadam",
     website: "https://www.serafadam.com",
   },
   {
@@ -22,14 +22,14 @@ const founders = [
     name: "Krzysztof Wojciechowski",
     image: "/images/founders/krzywoj.jpg",
     linkedin: "https://www.linkedin.com/in/krzy-woj/",
-    github: "https://github.com/krzywoj",
+    github: "https://github.com/kotochleb",
     website: null,
   },
   {
     name: "Maciej Aleksandrowicz",
     image: "/images/founders/macale.jpg",
     linkedin: "https://www.linkedin.com/in/maciej-aleksandrowicz/",
-    github: null,
+    github: "https://github.com/macmacal",
     website: null,
   },
 ]
@@ -59,11 +59,11 @@ export function FoundersSection() {
                   className="object-cover"
                 />
               </div>
-              <CardContent className="p-5">
+              <CardContent className="p-5 text-center">
                 <h3 className="text-lg font-semibold text-card-foreground mb-3">
                   {founder.name}
                 </h3>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center gap-3">
                   {founder.linkedin && (
                     <Link
                       href={founder.linkedin}
