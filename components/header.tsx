@@ -26,7 +26,7 @@ export function Header() {
             alt="CRAIC - Cracow Robotics & AI Club"
             width={120}
             height={38}
-            className="sm:w-[160px] sm:h-[50px]"
+            className="w-auto h-auto max-w-[100px] sm:max-w-[160px]"
             unoptimized
           />
         </Link>
