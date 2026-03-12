@@ -58,8 +58,13 @@ export function HallOfFameSection() {
           {sortedSpeakers.map((speaker) => (
             <div 
               key={speaker.name} 
-              className="relative bg-gradient-to-b from-[#3a5a5a] to-[#1f3333] rounded-lg p-4 flex flex-col items-center justify-center text-center shadow-[0_4px_12px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_0_rgba(0,0,0,0.2)] border border-[#4a6a6a]/30 hover:shadow-[0_6px_16px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.15),inset_0_-1px_0_rgba(0,0,0,0.2)] transition-shadow"
+              className="relative bg-gradient-to-b from-[#3a5a5a] to-[#1f3333] rounded-lg p-5 pt-6 flex flex-col items-center justify-center text-center shadow-[0_4px_12px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_0_rgba(0,0,0,0.2)] border border-[#4a6a6a]/30 hover:shadow-[0_6px_16px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.15),inset_0_-1px_0_rgba(0,0,0,0.2)] transition-shadow"
             >
+              {/* Corner pins */}
+              <div className="absolute top-2 left-2 w-2.5 h-2.5 rounded-full bg-gradient-to-br from-[#6a8a8a] to-[#3a5a5a] shadow-[inset_0_1px_2px_rgba(255,255,255,0.3),0_1px_2px_rgba(0,0,0,0.4)]" />
+              <div className="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-gradient-to-br from-[#6a8a8a] to-[#3a5a5a] shadow-[inset_0_1px_2px_rgba(255,255,255,0.3),0_1px_2px_rgba(0,0,0,0.4)]" />
+              <div className="absolute bottom-2 left-2 w-2.5 h-2.5 rounded-full bg-gradient-to-br from-[#6a8a8a] to-[#3a5a5a] shadow-[inset_0_1px_2px_rgba(255,255,255,0.3),0_1px_2px_rgba(0,0,0,0.4)]" />
+              <div className="absolute bottom-2 right-2 w-2.5 h-2.5 rounded-full bg-gradient-to-br from-[#6a8a8a] to-[#3a5a5a] shadow-[inset_0_1px_2px_rgba(255,255,255,0.3),0_1px_2px_rgba(0,0,0,0.4)]" />
               <div className="absolute inset-[3px] rounded-md border border-[#4a6a6a]/20 pointer-events-none" />
               <h4 className="font-semibold text-[#F2D4AE] mb-2 text-sm drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">
                 {speaker.name}
