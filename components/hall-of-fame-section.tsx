@@ -34,8 +34,12 @@ const speakers = [
   { name: "Marek Niewiadomski", talks: 1, topics: ["Astorino Robot Arm"] },
 ]
 
-// Sort alphabetically by name
-const sortedSpeakers = [...speakers].sort((a, b) => a.name.localeCompare(b.name))
+// Sort alphabetically by surname (last word in name)
+const sortedSpeakers = [...speakers].sort((a, b) => {
+  const surnameA = a.name.split(' ').pop() || ''
+  const surnameB = b.name.split(' ').pop() || ''
+  return surnameA.localeCompare(surnameB)
+})
 
 export function HallOfFameSection() {
   return (
