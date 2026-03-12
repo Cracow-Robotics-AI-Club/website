@@ -61,20 +61,15 @@ export function GallerySection() {
             <button
               key={index}
               onClick={() => setSelectedImage(image)}
-              className="relative aspect-square min-h-[150px] rounded-xl overflow-hidden group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              className="relative aspect-square min-h-[150px] rounded-xl overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             >
               <Image
                 src={image.src}
                 alt={image.alt}
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
-                className="object-cover group-hover:scale-110 transition-transform duration-300"
+                className="object-cover"
               />
-              <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/60 transition-colors flex items-end p-4">
-                <span className="text-secondary-foreground text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                  {image.caption}
-                </span>
-              </div>
             </button>
           ))}
         </div>
