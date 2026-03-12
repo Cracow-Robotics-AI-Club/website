@@ -6,7 +6,6 @@ import { Linkedin, Github, Globe } from "lucide-react"
 const founders = [
   {
     name: "Adam Serafin",
-    role: "Robotics Lead at Luxonis",
     bio: "Robotics software engineer with years of experience in ROS programming, working on mobility, sensor fusion and control.",
     image: "/images/speaker-1.jpg",
     linkedin: "https://www.linkedin.com/in/adam-serafin/",
@@ -15,7 +14,6 @@ const founders = [
   },
   {
     name: "Grzegorz Bartyzel",
-    role: "AI Staff Engineer at Stellantis",
     bio: "PhD student focusing on robotic software engineering and reinforcement learning applications.",
     image: "/images/speaker-2.jpg",
     linkedin: "https://www.linkedin.com/in/gbartyzel/",
@@ -24,7 +22,6 @@ const founders = [
   },
   {
     name: "Krzysztof Wojciechowski",
-    role: "Robotics Software Engineer",
     bio: "Experienced in ROS development environments with background at LAAS-CNRS, MSc from AGH University of Krakow.",
     image: "/images/speaker-3.jpg",
     linkedin: "https://www.linkedin.com/in/krzy-woj/",
@@ -33,7 +30,6 @@ const founders = [
   },
   {
     name: "Maciej Aleksandrowicz",
-    role: "PhD Student & Robotics Engineer at AGH",
     bio: "PhD student and robotics software engineer at AGH University of Krakow, focusing on robotics research.",
     image: "/images/speaker-1.jpg",
     linkedin: "https://www.linkedin.com/in/maciej-aleksandrowicz/",
@@ -68,10 +64,9 @@ export function FoundersSection() {
                 />
               </div>
               <CardContent className="p-5">
-                <h3 className="text-lg font-semibold text-card-foreground mb-1">
+                <h3 className="text-lg font-semibold text-card-foreground mb-2">
                   {founder.name}
                 </h3>
-                <p className="text-sm text-primary mb-3">{founder.role}</p>
                 <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
                   {founder.bio}
                 </p>
