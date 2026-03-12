@@ -14,9 +14,10 @@ export function AboutSection() {
     <section id="about" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
             About Our Community
           </h2>
+          <p className="text-sm text-muted-foreground text-center mb-6">Since 2023</p>
           <p className="text-lg text-muted-foreground text-center mb-12 text-pretty">
             If you are interested in robotics, Artificial Intelligence, or new technologies 
             like IoT and AR/VR, this group is right for you! At our meetings, we raise both 
