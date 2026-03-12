@@ -61,7 +61,7 @@ export function GallerySection() {
             <button
               key={index}
               onClick={() => setSelectedImage(image)}
-              className="relative aspect-square rounded-xl overflow-hidden group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              className="relative aspect-square min-h-[150px] rounded-xl overflow-hidden group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             >
               <Image
                 src={image.src}
