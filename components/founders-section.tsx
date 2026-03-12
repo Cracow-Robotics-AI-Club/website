@@ -7,7 +7,7 @@ const founders = [
   {
     name: "Adam Serafin",
     bio: "Robotics software engineer with years of experience in ROS programming, working on mobility, sensor fusion and control.",
-    image: "/images/speaker-1.jpg",
+    image: "/images/founders/adaser.jpg",
     linkedin: "https://www.linkedin.com/in/adam-serafin/",
     github: "https://github.com/aserafin",
     website: null,
@@ -15,7 +15,7 @@ const founders = [
   {
     name: "Grzegorz Bartyzel",
     bio: "PhD student focusing on robotic software engineering and reinforcement learning applications.",
-    image: "/images/speaker-2.jpg",
+    image: "/images/founders/grzbae.jpg",
     linkedin: "https://www.linkedin.com/in/gbartyzel/",
     github: "https://github.com/gbartyzel",
     website: null,
@@ -23,7 +23,7 @@ const founders = [
   {
     name: "Krzysztof Wojciechowski",
     bio: "Experienced in ROS development environments with background at LAAS-CNRS, MSc from AGH University of Krakow.",
-    image: "/images/speaker-3.jpg",
+    image: "/images/founders/krzywoj.jpg",
     linkedin: "https://www.linkedin.com/in/krzy-woj/",
     github: "https://github.com/krzywoj",
     website: null,
@@ -31,7 +31,7 @@ const founders = [
   {
     name: "Maciej Aleksandrowicz",
     bio: "PhD student and robotics software engineer at AGH University of Krakow, focusing on robotics research.",
-    image: "/images/speaker-1.jpg",
+    image: "/images/founders/macale.jpg",
     linkedin: "https://www.linkedin.com/in/maciej-aleksandrowicz/",
     github: null,
     website: null,

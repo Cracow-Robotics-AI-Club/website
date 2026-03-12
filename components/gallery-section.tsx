@@ -7,24 +7,39 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 const galleryImages = [
   {
-    src: "/images/event-1.jpg",
-    alt: "Tech meetup presentation on robotics",
-    caption: "Meetup #13 - ROS 2 Workshop",
+    src: "/images/events/20231218_191230.jpg",
+    alt: "CRAIC Meetup presentation",
+    caption: "Meetup #7 - December 2023",
   },
   {
-    src: "/images/event-2.jpg",
-    alt: "Hands-on robotics workshop",
-    caption: "Building mobile robots at our maker session",
+    src: "/images/events/20240325_191130.jpg",
+    alt: "CRAIC Meetup presentation",
+    caption: "Meetup #8 - March 2024",
   },
   {
-    src: "/images/event-3.jpg",
-    alt: "Networking session at tech meetup",
-    caption: "Community networking and discussions",
+    src: "/images/events/P1012361.JPG",
+    alt: "CRAIC community gathering",
+    caption: "Community networking session",
   },
   {
-    src: "/images/event-4.jpg",
-    alt: "AI presentation with neural network diagrams",
-    caption: "Deep learning and neural networks talk",
+    src: "/images/events/P1013629.JPG",
+    alt: "Robotics demonstration",
+    caption: "Robotics demo at CRAIC",
+  },
+  {
+    src: "/images/events/P1013644.JPG",
+    alt: "CRAIC meetup attendees",
+    caption: "Our amazing community",
+  },
+  {
+    src: "/images/events/P1051221.JPG",
+    alt: "Technical presentation",
+    caption: "Technical deep dive session",
+  },
+  {
+    src: "/images/events/P1051254.JPG",
+    alt: "CRAIC event",
+    caption: "Knowledge sharing at CRAIC",
   },
 ]
 
