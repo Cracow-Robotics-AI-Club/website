@@ -68,32 +68,27 @@ export function HallOfFameSection() {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {sortedSpeakers.filter(s => s.talks >= 2).map((speaker) => (
-              <Card 
+              <div 
                 key={speaker.name} 
-                className="bg-card border-2 border-[#608C5E]/40 hover:border-[#608C5E] transition-colors shadow-sm hover:shadow-md"
+                className="bg-[#274040] rounded-xl p-6 text-center hover:bg-[#1f3333] transition-colors"
               >
-                <CardContent className="p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <h4 className="text-lg font-semibold text-card-foreground">
-                      {speaker.name}
-                    </h4>
-                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#608C5E] text-white text-sm font-medium">
-                      {speaker.talks}
-                      <Mic2 className="w-3 h-3" />
+                <div className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#608C5E] text-white text-sm font-medium mb-3">
+                  {speaker.talks} talks
+                </div>
+                <h4 className="text-xl font-bold text-[#F2D4AE] mb-3">
+                  {speaker.name}
+                </h4>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {speaker.topics.map((topic) => (
+                    <span
+                      key={topic}
+                      className="text-xs text-[#F2D4AE]/70"
+                    >
+                      {topic}
                     </span>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {speaker.topics.map((topic) => (
-                      <span
-                        key={topic}
-                        className="inline-block px-3 py-1 rounded-full bg-[#608C5E]/10 text-[#608C5E] text-xs font-medium border border-[#608C5E]/20"
-                      >
-                        {topic}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -106,21 +101,19 @@ export function HallOfFameSection() {
             </div>
             All Speakers ({sortedSpeakers.filter(s => s.talks === 1).length})
           </h3>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {sortedSpeakers.filter(s => s.talks === 1).map((speaker) => (
-              <Card 
+              <div 
                 key={speaker.name} 
-                className="bg-card border border-border hover:border-[#608C5E]/50 transition-colors"
+                className="bg-[#274040] rounded-xl p-4 text-center hover:bg-[#1f3333] transition-colors"
               >
-                <CardContent className="p-4">
-                  <h4 className="font-medium text-card-foreground mb-3 text-sm">
-                    {speaker.name}
-                  </h4>
-                  <span className="inline-block px-2.5 py-1 rounded-full bg-[#274040]/10 text-[#274040] text-xs font-medium">
-                    {speaker.topics[0]}
-                  </span>
-                </CardContent>
-              </Card>
+                <h4 className="font-semibold text-[#F2D4AE] mb-2 text-sm">
+                  {speaker.name}
+                </h4>
+                <span className="text-xs text-[#F2D4AE]/60">
+                  {speaker.topics[0]}
+                </span>
+              </div>
             ))}
           </div>
         </div>
