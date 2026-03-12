@@ -34,8 +34,8 @@ const speakers = [
   { name: "Marek Niewiadomski", talks: 1, topics: ["Astorino Robot Arm"] },
 ]
 
-// Sort by number of talks (descending), then alphabetically
-const sortedSpeakers = [...speakers].sort((a, b) => b.talks - a.talks || a.name.localeCompare(b.name))
+// Sort alphabetically by name
+const sortedSpeakers = [...speakers].sort((a, b) => a.name.localeCompare(b.name))
 
 export function HallOfFameSection() {
   return (
