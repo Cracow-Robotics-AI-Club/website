@@ -24,9 +24,9 @@ export function Header() {
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/napis_upscale%281%29-IlsjYEemXTrtC9koYwSSKPGJ2vgB3H.png"
             alt="CRAIC - Cracow Robotics & AI Club"
-            width={160}
-            height={50}
-            className="hidden sm:block"
+            width={120}
+            height={38}
+            className="sm:w-[160px] sm:h-[50px]"
             unoptimized
           />
         </Link>
