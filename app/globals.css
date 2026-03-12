@@ -126,7 +126,7 @@
 
 /* Distressed Factory Sign Effects */
 
-/* Noise texture overlay for weathered look */
+/* Heavy grain noise overlay */
 .distressed-bg {
   position: relative;
 }
@@ -135,85 +135,128 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: 
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.08;
   pointer-events: none;
   z-index: 1;
+  mix-blend-mode: multiply;
 }
 
-/* Paint chip/peeling effect for cards */
+/* Visible paint chip corners */
 .paint-chip {
   position: relative;
-  overflow: hidden;
+}
+
+.paint-chip::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 25px 25px 0;
+  border-color: transparent var(--muted) transparent transparent;
+  z-index: 10;
 }
 
 .paint-chip::after {
   content: '';
   position: absolute;
-  top: -2px;
-  right: -2px;
-  width: 20px;
-  height: 20px;
-  background: linear-gradient(135deg, transparent 50%, var(--border) 50%);
-  opacity: 0.6;
-}
-
-/* Weathered border effect */
-.weathered-border {
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
   border-style: solid;
-  border-image: repeating-linear-gradient(
-    90deg,
-    var(--border) 0px,
-    var(--border) 4px,
-    transparent 4px,
-    transparent 6px
-  ) 1;
+  border-width: 20px 0 0 20px;
+  border-color: transparent transparent transparent var(--muted);
+  z-index: 10;
 }
 
-/* Rusty/oxidized text effect for headings */
-.rust-text {
-  background: linear-gradient(
-    180deg,
-    var(--foreground) 0%,
-    #73352F 40%,
-    #A64941 60%,
-    var(--foreground) 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  text-shadow: 
-    1px 1px 0 rgba(115, 53, 47, 0.1),
-    -1px -1px 0 rgba(242, 212, 174, 0.1);
-}
-
-/* Worn edge effect */
+/* Worn edges with visible wear marks */
 .worn-edges {
   box-shadow: 
-    inset 2px 2px 4px rgba(0, 0, 0, 0.1),
-    inset -2px -2px 4px rgba(255, 255, 255, 0.05),
-    0 0 0 1px rgba(0, 0, 0, 0.05);
+    inset 3px 3px 6px rgba(0, 0, 0, 0.15),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.1),
+    inset 0 0 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Factory stencil text effect */
-.stencil-text {
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  font-weight: 700;
+/* Visible scratched metal surface */
+.scratched {
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 3px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 8px,
+      rgba(0, 0, 0, 0.02) 8px,
+      rgba(0, 0, 0, 0.02) 9px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 20px,
+      rgba(0, 0, 0, 0.015) 20px,
+      rgba(0, 0, 0, 0.015) 21px
+    );
+}
+
+/* Sun bleached/faded sections */
+.sun-faded {
+  background: 
+    radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(0,0,0,0.05) 0%, transparent 40%),
+    var(--background);
+}
+
+/* Industrial rivets */
+.rivets {
   position: relative;
 }
 
-.stencil-text::before {
-  content: attr(data-text);
+.rivets::before,
+.rivets::after {
+  content: '';
   position: absolute;
-  left: 1px;
-  top: 1px;
-  color: rgba(115, 53, 47, 0.3);
-  z-index: -1;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: 
+    radial-gradient(circle at 35% 35%, #c9a87a 0%, #8a7355 40%, #5a4a3a 100%);
+  box-shadow: 
+    inset 1px 1px 2px rgba(255,255,255,0.3),
+    inset -1px -1px 2px rgba(0,0,0,0.4),
+    1px 1px 3px rgba(0,0,0,0.2);
+  z-index: 10;
 }
 
-/* Peeling paint corner effect */
+.rivets::before {
+  top: 12px;
+  left: 12px;
+}
+
+.rivets::after {
+  top: 12px;
+  right: 12px;
+}
+
+/* Aged paper with visible stains */
+.aged-paper {
+  background: 
+    radial-gradient(ellipse at 20% 30%, rgba(166, 73, 65, 0.05) 0%, transparent 30%),
+    radial-gradient(ellipse at 80% 70%, rgba(115, 53, 47, 0.04) 0%, transparent 25%),
+    radial-gradient(ellipse at 50% 90%, rgba(166, 73, 65, 0.03) 0%, transparent 35%),
+    var(--card);
+}
+
+/* Peeling corner effect */
 .peel-corner {
   position: relative;
 }
@@ -221,65 +264,44 @@
 .peel-corner::before {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 30px;
-  height: 30px;
+  bottom: -1px;
+  left: -1px;
+  width: 35px;
+  height: 35px;
   background: linear-gradient(
     -45deg,
-    transparent 15px,
-    var(--muted) 15px,
-    var(--muted) 17px,
-    var(--border) 17px
+    transparent 48%,
+    var(--border) 48%,
+    var(--border) 52%,
+    var(--muted) 52%
   );
-  opacity: 0.5;
+  z-index: 10;
 }
 
-/* Scratched surface effect */
-.scratched {
-  background-image: 
-    linear-gradient(90deg, transparent 98%, rgba(0,0,0,0.03) 98%),
-    linear-gradient(0deg, transparent 98%, rgba(0,0,0,0.02) 98%);
-  background-size: 7px 7px, 11px 11px;
+/* Stencil text with offset shadow */
+.stencil-text {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 800;
+  position: relative;
+  text-shadow: 
+    2px 2px 0 rgba(115, 53, 47, 0.2),
+    -1px -1px 0 rgba(255, 255, 255, 0.1);
 }
 
-/* Faded/sun-bleached effect for sections */
-.sun-faded {
-  background: linear-gradient(
-    180deg,
-    var(--background) 0%,
-    color-mix(in srgb, var(--background) 95%, var(--muted)) 50%,
-    var(--background) 100%
-  );
-}
-
-/* Industrial rivet decoration */
-.rivets::before,
-.rivets::after {
+/* Rust stain drip effect */
+.rust-drip::after {
   content: '';
   position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, var(--muted), var(--border));
-  box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3);
-}
-
-.rivets::before {
-  top: 10px;
-  left: 10px;
-}
-
-.rivets::after {
-  top: 10px;
-  right: 10px;
-}
-
-/* Aged paper texture for cards */
-.aged-paper {
-  background: 
-    linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0,0,0,0.02) 1px, transparent 1px),
-    var(--card);
-  background-size: 20px 20px, 20px 20px, 100% 100%;
+  bottom: 0;
+  left: 20%;
+  width: 3px;
+  height: 40px;
+  background: linear-gradient(
+    to bottom,
+    rgba(166, 73, 65, 0.3) 0%,
+    rgba(115, 53, 47, 0.15) 50%,
+    transparent 100%
+  );
+  border-radius: 0 0 2px 2px;
 }

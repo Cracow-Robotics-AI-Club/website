@@ -130,7 +130,7 @@ export function EventsSection() {
               rel="noopener noreferrer"
               className="group"
             >
-              <Card className="bg-card border-border hover:shadow-lg hover:border-primary/50 transition-all h-full aged-paper paint-chip worn-edges">
+              <Card className="bg-card border-border hover:shadow-lg hover:border-primary/50 transition-all h-full aged-paper worn-edges relative overflow-hidden">
                 <CardHeader className="pb-3">
                   <div className="flex items-center justify-between mb-2">
                     <Badge variant="outline" className="text-xs">

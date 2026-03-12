@@ -25,7 +25,7 @@ export function HeroSection() {
         </div>
 
         {/* Featured Event Card */}
-        <div className="max-w-3xl mx-auto bg-card rounded-2xl p-6 md:p-8 shadow-2xl border border-border aged-paper worn-edges">
+        <div className="max-w-3xl mx-auto bg-card rounded-2xl p-6 md:p-8 shadow-2xl border border-border aged-paper worn-edges paint-chip relative">
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex-1">
               <div className="flex flex-wrap gap-2 mb-4">

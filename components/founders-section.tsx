@@ -53,7 +53,7 @@ export function FoundersSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {founders.map((founder) => (
-            <Card key={founder.name} className="bg-card border-border overflow-hidden aged-paper peel-corner worn-edges">
+            <Card key={founder.name} className="bg-card border-border overflow-hidden aged-paper worn-edges relative">
               <div className="aspect-square relative bg-muted w-full">
                 <Image
                   src={founder.image}
