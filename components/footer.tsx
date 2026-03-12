@@ -19,9 +19,9 @@ export function Footer() {
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/napis-KYcIGBJTSZB6NuDNX9BM5yZcCD7Z0D.png"
                 alt="CRAIC - Cracow Robotics & AI Club"
-                width={180}
-                height={56}
-                className="w-auto h-auto"
+                width={154}
+                height={48}
+                className="h-[48px] w-auto"
               />
             </Link>
             <p className="mb-6 max-w-md text-sm text-[#F2D4AE]/70">
