@@ -59,19 +59,18 @@ export function HallOfFameSection() {
           {sortedSpeakers.map((speaker) => (
             <div 
               key={speaker.name} 
-              className="bg-[#274040] rounded-xl p-4 text-center hover:bg-[#1f3333] transition-colors"
+              className="bg-[#274040] rounded-xl p-4 flex flex-col items-center justify-center text-center hover:bg-[#1f3333] transition-colors"
             >
-              {speaker.talks >= 2 && (
-                <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#608C5E] text-white text-xs font-medium mb-2">
-                  {speaker.talks} talks
-                </div>
-              )}
               <h4 className="font-semibold text-[#F2D4AE] mb-2 text-sm">
                 {speaker.name}
               </h4>
-              <span className="text-xs text-[#F2D4AE]/60">
-                {speaker.topics[0]}
-              </span>
+              <div className="flex flex-col items-center gap-1">
+                {speaker.topics.map((topic) => (
+                  <span key={topic} className="text-xs text-[#F2D4AE]/60">
+                    {topic}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
