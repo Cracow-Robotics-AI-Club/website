@@ -17,11 +17,10 @@ export function Footer() {
                 className="rounded-lg"
               />
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/napis_upscale%281%29-IlsjYEemXTrtC9koYwSSKPGJ2vgB3H.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/napis-KYcIGBJTSZB6NuDNX9BM5yZcCD7Z0D.png"
                 alt="CRAIC - Cracow Robotics & AI Club"
                 width={180}
                 height={56}
-                unoptimized
               />
             </Link>
             <p className="mb-6 max-w-md text-sm text-[#F2D4AE]/70">
