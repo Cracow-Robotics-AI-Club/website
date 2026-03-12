@@ -62,9 +62,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="mb-4 font-bold text-[#F2D4AE]">
-              Quick Links
-            </h4>
+            <h4 className="mb-4 font-bold text-[#F2D4AE]">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="#about" className="text-sm text-[#F2D4AE]/70 transition-colors hover:text-[#608C5E]">
@@ -91,13 +89,9 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="mb-4 font-bold text-[#F2D4AE]">
-              Contact
-            </h4>
+            <h4 className="mb-4 font-bold text-[#F2D4AE]">Contact</h4>
             <ul className="space-y-2">
-              <li className="text-sm text-[#F2D4AE]/70">
-                Kraków, Poland
-              </li>
+              <li className="text-sm text-[#F2D4AE]/70">Kraków, Poland</li>
               <li>
                 <a
                   href="mailto:cracow.robotics@gmail.com"
