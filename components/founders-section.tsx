@@ -40,7 +40,7 @@ const founders = [
 
 export function FoundersSection() {
   return (
-    <section id="founders" className="py-20 bg-background sun-faded grain-texture">
+    <section id="founders" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -53,7 +53,7 @@ export function FoundersSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {founders.map((founder) => (
-            <Card key={founder.name} className="bg-card border-2 border-[#274040]/20 overflow-hidden aged-paper corner-rust relative">
+            <Card key={founder.name} className="bg-card border border-border overflow-hidden hover:shadow-lg transition-shadow">
               <div className="relative bg-muted w-full h-64">
                 <Image
                   src={founder.image}

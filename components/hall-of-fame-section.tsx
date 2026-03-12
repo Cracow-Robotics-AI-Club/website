@@ -5,8 +5,8 @@ import { Mic2, Trophy } from "lucide-react"
 const speakers = [
   { name: "Maciej Aleksandrowicz", talks: 2, topics: ["Behavioral Trees", "ICRA Conference Highlights"] },
   { name: "Adam Krawczyk", talks: 2, topics: ["O3DE ROS2 Simulations", "AI Agents with ROS 2"] },
-  { name: "Marcin Gałczyński", talks: 2, topics: ["Mechatronic Mannequin Development"] },
   { name: "Szymon Bednorz", talks: 2, topics: ["Planetary Rover Kalman", "Lunar Robotics"] },
+  { name: "Marcin Gałczyński", talks: 1, topics: ["Mechatronic Mannequin Development"] },
   { name: "Krzysztof Wojciechowski", talks: 1, topics: ["ROS Development Environments"] },
   { name: "Adam Serafin", talks: 1, topics: ["Introduction to Robotics"] },
   { name: "Grzegorz Bartyzel", talks: 1, topics: ["Reinforcement Learning on Real Robots"] },
@@ -41,51 +41,55 @@ const sortedSpeakers = [...speakers].sort((a, b) => b.talks - a.talks)
 
 export function HallOfFameSection() {
   return (
-    <section id="speakers" className="py-16 md:py-24 bg-muted/30 grain-texture">
+    <section id="speakers" className="py-16 md:py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Trophy className="w-8 h-8 text-[#A64941]" />
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground stencil-text">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="p-3 rounded-full bg-[#608C5E]">
+              <Trophy className="w-6 h-6 text-white" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Hall of Fame
             </h2>
           </div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Celebrating the amazing speakers who have shared their knowledge and expertise at CRAIC meetups.
-            {" "}<span className="font-semibold">{speakers.length} speakers</span> have given talks across our events.
+            {" "}<span className="font-semibold text-[#608C5E]">{speakers.length} speakers</span> have given talks across our events.
           </p>
         </div>
 
         {/* Top Speakers */}
         <div className="mb-12">
           <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
-            <Mic2 className="w-5 h-5 text-primary" />
+            <div className="p-1.5 rounded-md bg-[#608C5E]/20">
+              <Mic2 className="w-4 h-4 text-[#608C5E]" />
+            </div>
             Top Contributors
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {sortedSpeakers.filter(s => s.talks >= 2).map((speaker) => (
               <Card 
                 key={speaker.name} 
-                className="bg-card border-2 border-[#A64941]/30 aged-paper corner-rust relative overflow-hidden"
+                className="bg-card border-2 border-[#608C5E]/40 hover:border-[#608C5E] transition-colors shadow-sm hover:shadow-md"
               >
                 <CardContent className="p-6">
-                  <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-start justify-between mb-4">
                     <h4 className="text-lg font-semibold text-card-foreground">
                       {speaker.name}
                     </h4>
-                    <Badge className="bg-[#A64941] text-white border-0">
-                      {speaker.talks} talks
-                    </Badge>
+                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#608C5E] text-white text-sm font-medium">
+                      {speaker.talks}
+                      <Mic2 className="w-3 h-3" />
+                    </span>
                   </div>
-                  <div className="flex flex-wrap gap-1">
+                  <div className="flex flex-wrap gap-2">
                     {speaker.topics.map((topic) => (
-                      <Badge
+                      <span
                         key={topic}
-                        variant="outline"
-                        className="text-xs border-primary/30 text-primary"
+                        className="inline-block px-3 py-1 rounded-full bg-[#608C5E]/10 text-[#608C5E] text-xs font-medium border border-[#608C5E]/20"
                       >
                         {topic}
-                      </Badge>
+                      </span>
                     ))}
                   </div>
                 </CardContent>
@@ -97,25 +101,24 @@ export function HallOfFameSection() {
         {/* All Speakers Grid */}
         <div>
           <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
-            <Mic2 className="w-5 h-5 text-muted-foreground" />
+            <div className="p-1.5 rounded-md bg-muted">
+              <Mic2 className="w-4 h-4 text-muted-foreground" />
+            </div>
             All Speakers ({sortedSpeakers.filter(s => s.talks === 1).length})
           </h3>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {sortedSpeakers.filter(s => s.talks === 1).map((speaker) => (
               <Card 
                 key={speaker.name} 
-                className="bg-card border border-border aged-paper relative overflow-hidden"
+                className="bg-card border border-border hover:border-[#608C5E]/50 transition-colors"
               >
                 <CardContent className="p-4">
-                  <h4 className="font-medium text-card-foreground mb-2 text-sm">
+                  <h4 className="font-medium text-card-foreground mb-3 text-sm">
                     {speaker.name}
                   </h4>
-                  <Badge
-                    variant="outline"
-                    className="text-xs border-muted-foreground/30"
-                  >
+                  <span className="inline-block px-2.5 py-1 rounded-full bg-[#274040]/10 text-[#274040] text-xs font-medium">
                     {speaker.topics[0]}
-                  </Badge>
+                  </span>
                 </CardContent>
               </Card>
             ))}

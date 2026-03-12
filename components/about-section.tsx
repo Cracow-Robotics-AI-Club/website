@@ -11,7 +11,7 @@ const topics = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-background sun-faded grain-texture">
+    <section id="about" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
@@ -29,7 +29,7 @@ export function AboutSection() {
             {topics.map((topic) => (
               <div
                 key={topic.label}
-                className="flex flex-col items-center p-6 rounded-xl bg-card border-2 border-[#274040]/20 hover:border-primary/50 hover:shadow-lg transition-all aged-paper corner-rust relative"
+                className="flex flex-col items-center p-6 rounded-xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all"
               >
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
                   <topic.icon className="w-6 h-6 text-primary" />
@@ -40,17 +40,17 @@ export function AboutSection() {
           </div>
 
           <div className="mt-12 grid grid-cols-3 gap-6 text-center">
-            <div className="p-6 rounded-xl bg-secondary border-3 border-[#274040]/40 worn-edges scratched relative rivets overflow-hidden rust-spots">
-              <div className="text-3xl md:text-4xl font-bold text-secondary-foreground stencil-text relative z-10">784</div>
-              <div className="text-sm text-secondary-foreground/70 uppercase tracking-wider mt-1 relative z-10">Members</div>
+            <div className="p-6 rounded-xl bg-secondary">
+              <div className="text-3xl md:text-4xl font-bold text-secondary-foreground">784</div>
+              <div className="text-sm text-secondary-foreground/70 mt-1">Members</div>
             </div>
-            <div className="p-6 rounded-xl bg-secondary border-3 border-[#274040]/40 worn-edges scratched relative rivets overflow-hidden rust-spots">
-              <div className="text-3xl md:text-4xl font-bold text-secondary-foreground stencil-text relative z-10">14</div>
-              <div className="text-sm text-secondary-foreground/70 uppercase tracking-wider mt-1 relative z-10">Meetups</div>
+            <div className="p-6 rounded-xl bg-secondary">
+              <div className="text-3xl md:text-4xl font-bold text-secondary-foreground">14</div>
+              <div className="text-sm text-secondary-foreground/70 mt-1">Meetups</div>
             </div>
-            <div className="p-6 rounded-xl bg-secondary border-3 border-[#274040]/40 worn-edges scratched relative rivets overflow-hidden rust-spots">
-              <div className="text-3xl md:text-4xl font-bold text-secondary-foreground stencil-text relative z-10">4.7</div>
-              <div className="text-sm text-secondary-foreground/70 uppercase tracking-wider mt-1 relative z-10">Rating</div>
+            <div className="p-6 rounded-xl bg-secondary">
+              <div className="text-3xl md:text-4xl font-bold text-secondary-foreground">4.7</div>
+              <div className="text-sm text-secondary-foreground/70 mt-1">Rating</div>
             </div>
           </div>
         </div>
