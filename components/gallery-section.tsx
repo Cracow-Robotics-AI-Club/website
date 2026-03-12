@@ -52,6 +52,7 @@ export function GallerySection() {
                 src={image.src}
                 alt={image.alt}
                 fill
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover group-hover:scale-110 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/60 transition-colors flex items-end p-4">
@@ -70,11 +71,12 @@ export function GallerySection() {
             </VisuallyHidden>
             {selectedImage && (
               <div className="relative">
-                <div className="relative aspect-video">
+                <div className="relative aspect-video w-full">
                   <Image
                     src={selectedImage.src}
                     alt={selectedImage.alt}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 896px"
                     className="object-cover"
                   />
                 </div>

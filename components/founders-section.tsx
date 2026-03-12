@@ -58,11 +58,12 @@ export function FoundersSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {founders.map((founder) => (
             <Card key={founder.name} className="bg-card border-border overflow-hidden">
-              <div className="aspect-square relative bg-muted">
+              <div className="aspect-square relative bg-muted w-full">
                 <Image
                   src={founder.image}
                   alt={founder.name}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover"
                 />
               </div>
