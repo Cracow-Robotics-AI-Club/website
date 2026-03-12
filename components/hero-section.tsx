@@ -75,7 +75,7 @@ export function HeroSection() {
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" asChild>
+                <Button size="lg" asChild className="bg-[#608C5E] hover:bg-[#4a7248] text-white">
                   <a href="mailto:cracow.robotics@gmail.com">
                     Become a Speaker
                   </a>
