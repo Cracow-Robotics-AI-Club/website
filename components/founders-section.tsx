@@ -6,15 +6,13 @@ import { Linkedin, Github, Globe } from "lucide-react"
 const founders = [
   {
     name: "Adam Serafin",
-    bio: "Robotics software engineer with years of experience in ROS programming, working on mobility, sensor fusion and control.",
     image: "/images/founders/adaser.jpg",
     linkedin: "https://www.linkedin.com/in/adam-serafin/",
     github: "https://github.com/aserafin",
-    website: null,
+    website: "https://www.serafadam.com",
   },
   {
     name: "Grzegorz Bartyzel",
-    bio: "PhD student focusing on robotic software engineering and reinforcement learning applications.",
     image: "/images/founders/grzbae.jpg",
     linkedin: "https://www.linkedin.com/in/gbartyzel/",
     github: "https://github.com/gbartyzel",
@@ -22,7 +20,6 @@ const founders = [
   },
   {
     name: "Krzysztof Wojciechowski",
-    bio: "Experienced in ROS development environments with background at LAAS-CNRS, MSc from AGH University of Krakow.",
     image: "/images/founders/krzywoj.jpg",
     linkedin: "https://www.linkedin.com/in/krzy-woj/",
     github: "https://github.com/krzywoj",
@@ -30,7 +27,6 @@ const founders = [
   },
   {
     name: "Maciej Aleksandrowicz",
-    bio: "PhD student and robotics software engineer at AGH University of Krakow, focusing on robotics research.",
     image: "/images/founders/macale.jpg",
     linkedin: "https://www.linkedin.com/in/maciej-aleksandrowicz/",
     github: null,
@@ -64,12 +60,9 @@ export function FoundersSection() {
                 />
               </div>
               <CardContent className="p-5">
-                <h3 className="text-lg font-semibold text-card-foreground mb-2">
+                <h3 className="text-lg font-semibold text-card-foreground mb-3">
                   {founder.name}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
-                  {founder.bio}
-                </p>
                 <div className="flex items-center gap-3">
                   {founder.linkedin && (
                     <Link
