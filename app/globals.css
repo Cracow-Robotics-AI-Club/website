@@ -123,3 +123,163 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Distressed Factory Sign Effects */
+
+/* Noise texture overlay for weathered look */
+.distressed-bg {
+  position: relative;
+}
+
+.distressed-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Paint chip/peeling effect for cards */
+.paint-chip {
+  position: relative;
+  overflow: hidden;
+}
+
+.paint-chip::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, transparent 50%, var(--border) 50%);
+  opacity: 0.6;
+}
+
+/* Weathered border effect */
+.weathered-border {
+  border-style: solid;
+  border-image: repeating-linear-gradient(
+    90deg,
+    var(--border) 0px,
+    var(--border) 4px,
+    transparent 4px,
+    transparent 6px
+  ) 1;
+}
+
+/* Rusty/oxidized text effect for headings */
+.rust-text {
+  background: linear-gradient(
+    180deg,
+    var(--foreground) 0%,
+    #73352F 40%,
+    #A64941 60%,
+    var(--foreground) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 
+    1px 1px 0 rgba(115, 53, 47, 0.1),
+    -1px -1px 0 rgba(242, 212, 174, 0.1);
+}
+
+/* Worn edge effect */
+.worn-edges {
+  box-shadow: 
+    inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.05),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Factory stencil text effect */
+.stencil-text {
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+}
+
+.stencil-text::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  color: rgba(115, 53, 47, 0.3);
+  z-index: -1;
+}
+
+/* Peeling paint corner effect */
+.peel-corner {
+  position: relative;
+}
+
+.peel-corner::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(
+    -45deg,
+    transparent 15px,
+    var(--muted) 15px,
+    var(--muted) 17px,
+    var(--border) 17px
+  );
+  opacity: 0.5;
+}
+
+/* Scratched surface effect */
+.scratched {
+  background-image: 
+    linear-gradient(90deg, transparent 98%, rgba(0,0,0,0.03) 98%),
+    linear-gradient(0deg, transparent 98%, rgba(0,0,0,0.02) 98%);
+  background-size: 7px 7px, 11px 11px;
+}
+
+/* Faded/sun-bleached effect for sections */
+.sun-faded {
+  background: linear-gradient(
+    180deg,
+    var(--background) 0%,
+    color-mix(in srgb, var(--background) 95%, var(--muted)) 50%,
+    var(--background) 100%
+  );
+}
+
+/* Industrial rivet decoration */
+.rivets::before,
+.rivets::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--muted), var(--border));
+  box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.rivets::before {
+  top: 10px;
+  left: 10px;
+}
+
+.rivets::after {
+  top: 10px;
+  right: 10px;
+}
+
+/* Aged paper texture for cards */
+.aged-paper {
+  background: 
+    linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.02) 1px, transparent 1px),
+    var(--card);
+  background-size: 20px 20px, 20px 20px, 100% 100%;
+}

@@ -112,7 +112,7 @@ const pastEvents = [
 
 export function EventsSection() {
   return (
-    <section id="events" className="py-16 md:py-24 bg-muted/30">
+    <section id="events" className="py-16 md:py-24 bg-muted/30 distressed-bg scratched">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
           Past Events
@@ -130,7 +130,7 @@ export function EventsSection() {
               rel="noopener noreferrer"
               className="group"
             >
-              <Card className="bg-card border-border hover:shadow-lg hover:border-primary/50 transition-all h-full">
+              <Card className="bg-card border-border hover:shadow-lg hover:border-primary/50 transition-all h-full aged-paper paint-chip worn-edges">
                 <CardHeader className="pb-3">
                   <div className="flex items-center justify-between mb-2">
                     <Badge variant="outline" className="text-xs">
