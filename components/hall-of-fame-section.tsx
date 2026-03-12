@@ -1,4 +1,4 @@
-import { Mic2 } from "lucide-react"
+
 
 const speakers = [
   { name: "Maciej Aleksandrowicz", talks: 2, topics: ["Behavioral Trees", "ICRA Conference Highlights"] },
@@ -42,14 +42,9 @@ export function HallOfFameSection() {
     <section id="speakers" className="py-16 md:py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="p-3 rounded-full bg-[#608C5E]">
-              <Mic2 className="w-6 h-6 text-white" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Speakers
-            </h2>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Speakers
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             <span className="font-semibold text-[#608C5E]">{speakers.length} speakers</span> have shared their knowledge and expertise at CRAIC meetups.
           </p>
