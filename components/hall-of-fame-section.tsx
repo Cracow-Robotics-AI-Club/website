@@ -54,18 +54,19 @@ export function HallOfFameSection() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
           {sortedSpeakers.map((speaker) => (
             <div 
               key={speaker.name} 
-              className="bg-[#274040] rounded-xl p-4 flex flex-col items-center justify-center text-center hover:bg-[#1f3333] transition-colors"
+              className="relative bg-gradient-to-b from-[#3a5a5a] to-[#1f3333] rounded-lg p-4 flex flex-col items-center justify-center text-center shadow-[0_4px_12px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_0_rgba(0,0,0,0.2)] border border-[#4a6a6a]/30 hover:shadow-[0_6px_16px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.15),inset_0_-1px_0_rgba(0,0,0,0.2)] transition-shadow"
             >
-              <h4 className="font-semibold text-[#F2D4AE] mb-2 text-sm">
+              <div className="absolute inset-[3px] rounded-md border border-[#4a6a6a]/20 pointer-events-none" />
+              <h4 className="font-semibold text-[#F2D4AE] mb-2 text-sm drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">
                 {speaker.name}
               </h4>
               <div className="flex flex-col items-center gap-1">
                 {speaker.topics.map((topic) => (
-                  <span key={topic} className="text-xs text-[#F2D4AE]/60">
+                  <span key={topic} className="text-xs text-[#F2D4AE]/60 drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)]">
                     {topic}
                   </span>
                 ))}
