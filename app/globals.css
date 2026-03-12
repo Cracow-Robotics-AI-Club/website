@@ -124,9 +124,25 @@
   }
 }
 
-/* Distressed Factory Sign Effects - Matching vintage industrial aesthetic */
+/* Distressed Factory Sign Effects - Spray paint aesthetic */
 
-/* Rust/oxidation spots scattered randomly */
+/* Spray paint splatter effect */
+.spray-paint {
+  position: relative;
+}
+
+.spray-paint::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='95' cy='8' r='2' fill='rgba(39,64,64,0.4)'/%3E%3Ccircle cx='92' cy='12' r='1' fill='rgba(39,64,64,0.3)'/%3E%3Ccircle cx='97' cy='15' r='1.5' fill='rgba(39,64,64,0.25)'/%3E%3Ccircle cx='90' cy='6' r='0.8' fill='rgba(39,64,64,0.35)'/%3E%3Ccircle cx='88' cy='10' r='0.5' fill='rgba(39,64,64,0.3)'/%3E%3Ccircle cx='94' cy='18' r='1.2' fill='rgba(39,64,64,0.2)'/%3E%3Ccircle cx='5' cy='92' r='2.5' fill='rgba(39,64,64,0.35)'/%3E%3Ccircle cx='8' cy='88' r='1' fill='rgba(39,64,64,0.25)'/%3E%3Ccircle cx='3' cy='95' r='1.5' fill='rgba(39,64,64,0.3)'/%3E%3Ccircle cx='10' cy='94' r='0.8' fill='rgba(39,64,64,0.2)'/%3E%3Ccircle cx='6' cy='85' r='0.6' fill='rgba(39,64,64,0.25)'/%3E%3Ccircle cx='12' cy='90' r='1.2' fill='rgba(39,64,64,0.15)'/%3E%3Ccircle cx='93' cy='90' r='1.8' fill='rgba(39,64,64,0.3)'/%3E%3Ccircle cx='96' cy='85' r='0.7' fill='rgba(39,64,64,0.25)'/%3E%3Ccircle cx='89' cy='93' r='1' fill='rgba(39,64,64,0.2)'/%3E%3Ccircle cx='4' cy='6' r='1.5' fill='rgba(39,64,64,0.25)'/%3E%3Ccircle cx='8' cy='10' r='0.8' fill='rgba(39,64,64,0.2)'/%3E%3Ccircle cx='6' cy='4' r='0.6' fill='rgba(39,64,64,0.3)'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Rust spots replaced with spray dots */
 .rust-spots {
   position: relative;
 }
@@ -136,10 +152,8 @@
   position: absolute;
   inset: 0;
   background-image: 
-    radial-gradient(ellipse 40px 30px at 95% 15%, rgba(39, 64, 64, 0.4) 0%, rgba(39, 64, 64, 0.2) 30%, transparent 60%),
-    radial-gradient(ellipse 30px 40px at 90% 85%, rgba(39, 64, 64, 0.3) 0%, rgba(39, 64, 64, 0.15) 40%, transparent 70%),
-    radial-gradient(ellipse 25px 20px at 5% 90%, rgba(39, 64, 64, 0.25) 0%, transparent 60%),
-    radial-gradient(ellipse 15px 15px at 8% 20%, rgba(39, 64, 64, 0.2) 0%, transparent 50%);
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='190' cy='15' r='3' fill='rgba(39,64,64,0.35)'/%3E%3Ccircle cx='185' cy='20' r='1.5' fill='rgba(39,64,64,0.25)'/%3E%3Ccircle cx='195' cy='25' r='2' fill='rgba(39,64,64,0.2)'/%3E%3Ccircle cx='182' cy='12' r='1' fill='rgba(39,64,64,0.3)'/%3E%3Ccircle cx='188' cy='28' r='0.8' fill='rgba(39,64,64,0.25)'/%3E%3Ccircle cx='192' cy='8' r='1.2' fill='rgba(39,64,64,0.2)'/%3E%3Ccircle cx='178' cy='18' r='0.6' fill='rgba(39,64,64,0.3)'/%3E%3Ccircle cx='10' cy='185' r='3.5' fill='rgba(39,64,64,0.3)'/%3E%3Ccircle cx='15' cy='178' r='1.5' fill='rgba(39,64,64,0.2)'/%3E%3Ccircle cx='5' cy='190' r='2' fill='rgba(39,64,64,0.25)'/%3E%3Ccircle cx='20' cy='188' r='1' fill='rgba(39,64,64,0.2)'/%3E%3Ccircle cx='8' cy='175' r='0.8' fill='rgba(39,64,64,0.25)'/%3E%3Ccircle cx='18' cy='195' r='1.5' fill='rgba(39,64,64,0.15)'/%3E%3Ccircle cx='185' cy='185' r='2.5' fill='rgba(39,64,64,0.25)'/%3E%3Ccircle cx='190' cy='178' r='1' fill='rgba(39,64,64,0.2)'/%3E%3Ccircle cx='180' cy='192' r='1.5' fill='rgba(39,64,64,0.15)'/%3E%3Ccircle cx='15' cy='12' r='2' fill='rgba(39,64,64,0.2)'/%3E%3Ccircle cx='20' cy='18' r='1' fill='rgba(39,64,64,0.15)'/%3E%3Ccircle cx='10' cy='8' r='0.8' fill='rgba(39,64,64,0.25)'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
   pointer-events: none;
   z-index: 2;
 }
@@ -244,13 +258,12 @@
     );
 }
 
-/* Sun bleached/faded sections with stains */
+/* Sun bleached/faded sections with spray speckles */
 .sun-faded {
   background: 
-    radial-gradient(ellipse at 85% 10%, rgba(39, 64, 64, 0.08) 0%, transparent 40%),
-    radial-gradient(ellipse at 10% 85%, rgba(39, 64, 64, 0.06) 0%, transparent 35%),
-    radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='170' cy='20' r='2' fill='rgba(39,64,64,0.1)'/%3E%3Ccircle cx='175' cy='25' r='1' fill='rgba(39,64,64,0.08)'/%3E%3Ccircle cx='165' cy='18' r='0.8' fill='rgba(39,64,64,0.12)'/%3E%3Ccircle cx='20' cy='170' r='1.5' fill='rgba(39,64,64,0.08)'/%3E%3Ccircle cx='25' cy='175' r='0.8' fill='rgba(39,64,64,0.06)'/%3E%3Ccircle cx='15' cy='165' r='0.6' fill='rgba(39,64,64,0.1)'/%3E%3Ccircle cx='60' cy='40' r='1' fill='rgba(255,255,255,0.15)'/%3E%3Ccircle cx='65' cy='35' r='0.6' fill='rgba(255,255,255,0.1)'/%3E%3C/svg%3E"),
     var(--background);
+  background-size: 100% 100%, 100% 100%;
 }
 
 /* Industrial rivets */
@@ -284,13 +297,12 @@
   right: 10px;
 }
 
-/* Aged paper with rust stains */
+/* Aged paper with spray paint speckles */
 .aged-paper {
   background: 
-    radial-gradient(ellipse 60px 50px at 90% 20%, rgba(39, 64, 64, 0.08) 0%, transparent 70%),
-    radial-gradient(ellipse 40px 45px at 85% 75%, rgba(39, 64, 64, 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse 30px 25px at 10% 80%, rgba(39, 64, 64, 0.05) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='92' cy='15' r='1.5' fill='rgba(39,64,64,0.12)'/%3E%3Ccircle cx='88' cy='18' r='0.8' fill='rgba(39,64,64,0.08)'/%3E%3Ccircle cx='95' cy='12' r='0.5' fill='rgba(39,64,64,0.1)'/%3E%3Ccircle cx='8' cy='85' r='1.2' fill='rgba(39,64,64,0.1)'/%3E%3Ccircle cx='12' cy='88' r='0.6' fill='rgba(39,64,64,0.08)'/%3E%3Ccircle cx='5' cy='82' r='0.4' fill='rgba(39,64,64,0.12)'/%3E%3Ccircle cx='90' cy='80' r='1' fill='rgba(39,64,64,0.08)'/%3E%3Ccircle cx='85' cy='85' r='0.5' fill='rgba(39,64,64,0.06)'/%3E%3C/svg%3E"),
     var(--card);
+  background-size: 100% 100%, 100% 100%;
 }
 
 /* Stencil text with industrial look */
@@ -317,7 +329,7 @@
   pointer-events: none;
 }
 
-/* Corner rust accumulation */
+/* Corner spray paint accumulation */
 .corner-rust {
   position: relative;
 }
@@ -327,14 +339,10 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 60px;
-  height: 60px;
-  background: radial-gradient(
-    ellipse at 100% 0%,
-    rgba(39, 64, 64, 0.2) 0%,
-    rgba(39, 64, 64, 0.1) 30%,
-    transparent 70%
-  );
+  width: 70px;
+  height: 70px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 70 70' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='65' cy='5' r='3' fill='rgba(39,64,64,0.25)'/%3E%3Ccircle cx='58' cy='8' r='2' fill='rgba(39,64,64,0.2)'/%3E%3Ccircle cx='62' cy='12' r='1.5' fill='rgba(39,64,64,0.18)'/%3E%3Ccircle cx='55' cy='5' r='1' fill='rgba(39,64,64,0.22)'/%3E%3Ccircle cx='68' cy='10' r='1.2' fill='rgba(39,64,64,0.15)'/%3E%3Ccircle cx='60' cy='3' r='0.8' fill='rgba(39,64,64,0.2)'/%3E%3Ccircle cx='52' cy='10' r='1.5' fill='rgba(39,64,64,0.12)'/%3E%3Ccircle cx='65' cy='15' r='1' fill='rgba(39,64,64,0.1)'/%3E%3Ccircle cx='50' cy='6' r='0.6' fill='rgba(39,64,64,0.15)'/%3E%3Ccircle cx='58' cy='18' r='0.8' fill='rgba(39,64,64,0.08)'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
   pointer-events: none;
   z-index: 5;
 }
@@ -344,14 +352,10 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 50px;
-  height: 50px;
-  background: radial-gradient(
-    ellipse at 0% 100%,
-    rgba(39, 64, 64, 0.15) 0%,
-    rgba(39, 64, 64, 0.08) 40%,
-    transparent 70%
-  );
+  width: 60px;
+  height: 60px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='55' r='2.5' fill='rgba(39,64,64,0.2)'/%3E%3Ccircle cx='10' cy='50' r='1.5' fill='rgba(39,64,64,0.15)'/%3E%3Ccircle cx='8' cy='58' r='1.8' fill='rgba(39,64,64,0.18)'/%3E%3Ccircle cx='15' cy='55' r='1' fill='rgba(39,64,64,0.12)'/%3E%3Ccircle cx='3' cy='50' r='1.2' fill='rgba(39,64,64,0.15)'/%3E%3Ccircle cx='12' cy='58' r='0.8' fill='rgba(39,64,64,0.1)'/%3E%3Ccircle cx='6' cy='45' r='0.6' fill='rgba(39,64,64,0.12)'/%3E%3Ccircle cx='18' cy='52' r='0.5' fill='rgba(39,64,64,0.08)'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
   pointer-events: none;
   z-index: 5;
 }
