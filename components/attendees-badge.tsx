@@ -14,17 +14,20 @@ export function AttendeesBadge() {
 
   if (isLoading) {
     return (
-      <Badge variant="outline" className="border-accent text-accent">
-        Loading...
+      <Badge variant="outline" className="border-accent text-accent animate-pulse">
+        ...
       </Badge>
     )
   }
 
-  const attendees = data?.attendees || 0
+  // Hide badge if no attendee data available
+  if (data?.attendees === null || data?.attendees === undefined) {
+    return null
+  }
 
   return (
     <Badge variant="outline" className="border-accent text-accent">
-      {attendees} Attendees
+      {data.attendees} Attendees
     </Badge>
   )
 }
