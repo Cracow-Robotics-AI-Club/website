@@ -20,23 +20,17 @@ async function scrapeAttendees(): Promise<number | null> {
 
     const html = await response.text()
     
-    // Look for "Attendees" label followed by a number
-    // Meetup HTML structure: <span>Attendees</span>...<span>64</span> or similar
-    const attendeesLabelMatch = html.match(/Attendees<\/[^>]+>[^<]*<[^>]+>(\d+)/i)
-    if (attendeesLabelMatch) {
-      return parseInt(attendeesLabelMatch[1], 10)
-    }
-    
-    // Alternative: look for attendee count in various patterns
+    // Look for "Attendees" followed by number and "See all" pattern
+    // HTML structure: Attendees</...>...<...>70</...>...<...>See all
     const patterns = [
-      /Attendees[^<]*<[^>]*>\s*(\d+)/i,
-      /(\d+)\s*attendees/i,
-      /(\d+)\s*attending/i,
-      /(\d+)\s*going/i,
+      // Attendees section: number between Attendees and See all
+      /Attendees[\s\S]*?>(\d+)<[\s\S]*?See all/i,
+      // General patterns
+      /Attendees<\/[^>]+>[\s\S]*?<[^>]+>(\d+)</i,
+      /Attendees[^>]*>[^<]*<[^>]*>(\d+)/i,
       /"rsvpCount"\s*:\s*(\d+)/i,
       /"going_count"\s*:\s*(\d+)/i,
       /"yes_rsvp_count"\s*:\s*(\d+)/i,
-      /attendeeCount['"]\s*:\s*(\d+)/i,
     ]
     
     for (const pattern of patterns) {
@@ -45,9 +39,6 @@ async function scrapeAttendees(): Promise<number | null> {
         return parseInt(match[1], 10)
       }
     }
-    
-    // Debug: log a snippet of HTML to see structure
-    console.log('[v0] HTML snippet around Attendees:', html.includes('Attendees') ? 'Found Attendees text' : 'No Attendees text found')
     
     return null
   } catch {
