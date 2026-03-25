@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, MapPin, Users, Clock, ArrowRight } from "lucide-react"
-import { AttendeesBadge } from "./attendees-badge"
 
 export function HeroSection() {
   return (
@@ -33,7 +32,9 @@ export function HeroSection() {
                 <Badge variant="secondary" className="bg-primary text-primary-foreground">
                   Upcoming
                 </Badge>
-                <AttendeesBadge />
+                <Badge variant="outline" className="border-accent text-accent">
+                  64 Attendees
+                </Badge>
               </div>
 
               <div className="space-y-3 mb-6">
