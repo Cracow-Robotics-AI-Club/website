@@ -33,7 +33,7 @@ export function HeroSection() {
                   Upcoming
                 </Badge>
                 <Badge variant="outline" className="border-accent text-accent">
-                  70 Attendees
+                  79 Attendees
                 </Badge>
               </div>
 

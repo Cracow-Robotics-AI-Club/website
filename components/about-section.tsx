@@ -19,10 +19,10 @@ export function AboutSection() {
           </h2>
           <p className="text-lg text-muted-foreground text-center mb-6">Since 2022</p>
           <p className="text-lg text-muted-foreground text-center mb-12 text-pretty">
-            If you are interested in robotics, Artificial Intelligence, or new technologies 
-            like IoT and AR/VR, this group is right for you! At our meetings, we raise both 
-            practical and theoretical issues. Whether you&apos;re a hobbyist, student, industrial 
-            practitioner, or academic scientist — everyone is welcome to join our community 
+            If you are interested in robotics, Artificial Intelligence, or new technologies
+            like IoT and AR/VR, this group is right for you! At our meetings, we raise both
+            practical and theoretical issues. Whether you&apos;re a hobbyist, student, industrial
+            practitioner, or academic scientist — everyone is welcome to join our community
             of enthusiasts!
           </p>
 
@@ -42,7 +42,7 @@ export function AboutSection() {
 
           <div className="mt-12 grid grid-cols-3 gap-6 text-center">
             <div className="p-6 rounded-xl bg-secondary">
-              <div className="text-3xl md:text-4xl font-bold text-secondary-foreground">784</div>
+              <div className="text-3xl md:text-4xl font-bold text-secondary-foreground">937</div>
               <div className="text-sm text-secondary-foreground/70 mt-1">Members</div>
             </div>
             <div className="p-6 rounded-xl bg-secondary">
