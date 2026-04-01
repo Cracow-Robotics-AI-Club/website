@@ -4,7 +4,6 @@ const speakers = [
   { name: "Maciej Aleksandrowicz", talks: 2, topics: ["Behavioral Trees", "ICRA Conference Highlights"] },
   { name: "Adam Krawczyk", talks: 2, topics: ["O3DE ROS2 Simulations", "AI Agents with ROS 2"] },
   { name: "Szymon Bednorz", talks: 2, topics: ["Planetary Rover Kalman", "Lunar Robotics"] },
-  { name: "Marcin Gałczyński", talks: 1, topics: ["Mechatronic Mannequin Development"] },
   { name: "Krzysztof Wojciechowski", talks: 1, topics: ["ROS Development Environments"] },
   { name: "Adam Serafin", talks: 1, topics: ["Introduction to Robotics"] },
   { name: "Grzegorz Bartyzel", talks: 1, topics: ["Reinforcement Learning on Real Robots"] },
@@ -56,8 +55,8 @@ export function HallOfFameSection() {
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
           {sortedSpeakers.map((speaker) => (
-            <div 
-              key={speaker.name} 
+            <div
+              key={speaker.name}
               className="relative bg-gradient-to-b from-[#3a5a5a] to-[#1f3333] rounded-lg px-6 py-4 flex flex-col items-center justify-center text-center shadow-[0_4px_12px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_0_rgba(0,0,0,0.2)] border border-[#4a6a6a]/30 hover:shadow-[0_6px_16px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.15),inset_0_-1px_0_rgba(0,0,0,0.2)] transition-shadow"
             >
               {/* Side rivets */}
