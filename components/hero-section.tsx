@@ -29,7 +29,7 @@ export function HeroSection() {
             <iframe
               src="https://luma.com/embed/event/evt-TJursm5r59Zj9as/simple"
               width="100%"
-              height="450"
+              height="650"
               frameBorder="0"
               style={{ border: '1px solid #bfcbda88', borderRadius: '4px' }}
               allow="fullscreen; payment"
