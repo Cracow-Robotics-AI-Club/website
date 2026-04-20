@@ -20,7 +20,7 @@ export function HeroSection() {
               allow="fullscreen; payment"
               aria-hidden="false"
               tabIndex={0}
-              className="w-full aspect-[1/1.8] md:aspect-[1/1.3]"
+              className="w-full min-h-[700px] md:min-h-0 md:aspect-[1/1.3]"
             />
             <div className="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
               <Button size="lg" asChild className="bg-[#608C5E] hover:bg-[#4a7248] text-white">
