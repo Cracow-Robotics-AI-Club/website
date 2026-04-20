@@ -15,14 +15,12 @@ export function HeroSection() {
           <div className="bg-card rounded-2xl p-4 md:p-6 shadow-2xl border border-border">
             <iframe
               src="https://luma.com/embed/event/evt-TJursm5r59Zj9as/simple"
-              width="100%"
-              height="720"
               frameBorder="0"
               style={{ border: '1px solid #bfcbda88', borderRadius: '4px' }}
               allow="fullscreen; payment"
               aria-hidden="false"
               tabIndex={0}
-              className="w-full"
+              className="w-full min-h-[800px] md:min-h-0 md:aspect-[1/1.3]"
             />
             <div className="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
               <Button size="lg" asChild className="bg-[#608C5E] hover:bg-[#4a7248] text-white">
