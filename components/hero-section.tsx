@@ -15,10 +15,8 @@ export function HeroSection() {
           <div className="bg-card rounded-2xl p-4 md:p-6 shadow-2xl border border-border">
             <iframe
               src="https://luma.com/embed/event/evt-TJursm5r59Zj9as/simple"
-              width="100%"
-              height="720"
               frameBorder="0"
-              style={{ border: '1px solid #bfcbda88', borderRadius: '4px' }}
+              style={{ border: '1px solid #bfcbda88', borderRadius: '4px', aspectRatio: '1 / 1.3' }}
               allow="fullscreen; payment"
               aria-hidden="false"
               tabIndex={0}
