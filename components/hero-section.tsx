@@ -16,11 +16,11 @@ export function HeroSection() {
             <iframe
               src="https://luma.com/embed/event/evt-TJursm5r59Zj9as/simple"
               frameBorder="0"
-              style={{ border: '1px solid #bfcbda88', borderRadius: '4px', aspectRatio: '1 / 1.3' }}
+              style={{ border: '1px solid #bfcbda88', borderRadius: '4px' }}
               allow="fullscreen; payment"
               aria-hidden="false"
               tabIndex={0}
-              className="w-full"
+              className="w-full aspect-[1/1.8] md:aspect-[1/1.3]"
             />
             <div className="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
               <Button size="lg" asChild className="bg-[#608C5E] hover:bg-[#4a7248] text-white">
