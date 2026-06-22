@@ -50,8 +50,8 @@ export function Header() {
             className="bg-[#A64941] text-white hover:bg-[#8a3d36]"
             asChild
           >
-            <a href="https://www.meetup.com/cracow-robotics-ai-club/" target="_blank" rel="noopener noreferrer">
-              Join Us
+            <a href="https://luma.com/user/craic" target="_blank" rel="noopener noreferrer">
+              Follow us
             </a>
           </Button>
         </nav>
