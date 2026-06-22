@@ -31,6 +31,8 @@ const speakers = [
   { name: "Miłosz Łagan", talks: 1, topics: ["Planetary Rover Kalman"] },
   { name: "Dariusz Biega", talks: 1, topics: ["Astorino Robot Arm"] },
   { name: "Marek Niewiadomski", talks: 1, topics: ["Astorino Robot Arm"] },
+  { name: "Maciej Sadowski", talks: 1, topics: ["From Simulation to Reality"] },
+  { name: "Krzysztof Tylka-Suleja", talks: 1, topics: ["What LLMs Cannot Know Before Acting"] } 
 ]
 
 // Sort alphabetically by surname (last word in name)
