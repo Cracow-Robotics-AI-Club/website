@@ -58,6 +58,14 @@ export function Footer() {
                 <span className="text-sm font-bold">M</span>
               </a>
               <a
+                href="https://luma.com/user/craic"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#33352F] text-[#F2D4AE] transition-colors hover:bg-[#608C5E]"
+              >
+                <span className="text-sm font-bold">L</span>
+              </a>
+              <a
                 href="https://www.youtube.com/@cracowroboticsaiclub"
                 target="_blank"
                 rel="noopener noreferrer"
