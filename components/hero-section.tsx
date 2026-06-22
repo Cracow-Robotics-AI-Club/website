@@ -14,7 +14,7 @@ export function HeroSection() {
         <div className="max-w-2xl mx-auto">
           <div className="bg-card rounded-2xl p-4 md:p-6 shadow-2xl border border-border">
             <iframe
-              src="https://luma.com/embed/event/evt-TJursm5r59Zj9as/simple"
+              src="https://luma.com/embed/event/evt-4GzSdWr4QWSjmih/simple"
               frameBorder="0"
               style={{ border: '1px solid #bfcbda88', borderRadius: '4px' }}
               allow="fullscreen; payment"
