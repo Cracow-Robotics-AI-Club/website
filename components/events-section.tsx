@@ -5,6 +5,14 @@ import { Calendar, MapPin, ExternalLink } from "lucide-react"
 
 const pastEvents = [
   {
+    id: 15,
+    title: "Cracow Robotics & AI Meetup #15",
+    date: "18.05.2026",
+    venue: "hub:raum Kraków, Przemysłowa 12",
+    description: "Simulations and LLMS!",
+    url: "https://luma.com/event/evt-TJursm5r59Zj9as",
+  },
+  {
     id: 14,
     title: "Cracow Robotics & AI Meetup #14",
     date: "30.03.2026",
